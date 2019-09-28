@@ -7,15 +7,11 @@ import sys, os
 #    os.mkdir(path)
 
 
-
 def create (name,range):
-    for i in range():
+    for i in range(1,9):
         path = os.path.join(os.getcwd(), '{}_{}'.format(name, i))
         os.mkdir(path)
 
-create(dir(1,9))
+create('dir',range)
 
-
-
-
-print('Выполнить создания папок?')
+print('Папки созданы, поздраляю!')
