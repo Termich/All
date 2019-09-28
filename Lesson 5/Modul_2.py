@@ -1,9 +1,10 @@
 import os
 
 # определим имя директории, которую удаляем
-path = "dir_2"
+path = "dir_3"
 
-
+for i in range(1,9)
+    path = os.path
 
 try:
     os.rmdir(path)

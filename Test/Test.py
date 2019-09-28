@@ -1,5 +1,7 @@
+
 import os
 
-path = "C:\Git\All\Test 1"
-
-os.rmdir(path)
+mydir = os.getcwd()
+filelist = [ f for f in os.listdir(mydir) if f.endswith("*dir") ]
+for f in filelist:
+    os.remove(os.path.join(mydir, f))
