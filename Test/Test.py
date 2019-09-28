@@ -1,7 +1,13 @@
 
 import os
 
-mydir = os.getcwd()
-filelist = [ f for f in os.listdir(mydir) if f.endswith("*dir") ]
-for f in filelist:
-    os.remove(os.path.join(mydir, f))
+import shutil, os
+
+
+def remove_folder_contents(path):
+    shutil.rmtree(path)
+    os.makedirs(path)
+
+
+remove_folder_contents('Git\All\Test')
+ 
