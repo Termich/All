@@ -1,4 +1,3 @@
-from .Lesson_1.Modul_1 import create
+import Modul_1
 
-create()
-
+create('dir',range)
