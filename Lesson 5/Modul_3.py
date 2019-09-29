@@ -1,8 +1,5 @@
-from random import randint,choice
+from random import choice
 
-def live(*vum):
-   vum = list(map(int, input('Введите 4 числа через запятую, в одной строке.').split(',')))
-   return choice(vum)
-
-
-print(*vum)
+def special():
+    return (choice(['1', '2', '3', '4', '5', '6', '7', '8']))
+print(special())
