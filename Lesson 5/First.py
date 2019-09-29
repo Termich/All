@@ -5,7 +5,12 @@ import sys, os
 def create (name,range):
     for i in range(1,10):
         path = os.path.join(os.getcwd(), '{}_{}'.format(name, i))
-        os.mkdir(path)
+        try:
+            os.mkdir(path)
+        except OSError:
+            print("Создать директорию %s не удалось" % path)
+        else:
+            print("Успешно создана  директория %s" % path)
 
 
 create('dir',range)
