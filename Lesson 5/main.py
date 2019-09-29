@@ -8,7 +8,7 @@ import Modul_1,Modul_3
 #
 
 # Вычисление случайного числа из файла Modul_3
-
+# print(special())
 
 
 
