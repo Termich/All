@@ -4,10 +4,11 @@ from random import choice
 
 
 def special(some_list):
-    if some_list: return (some_list)
+    if some_list: return (choice(some_list))
 
-key = [1,2,3,4]
+
 
 
 if __name__ == '__main__':
-    print(choice(special(key)))
+    key = [1, 2, 3, 4]
+    print(special(key))
