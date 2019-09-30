@@ -4,7 +4,7 @@ from random import choice
 
 
 def special(some_list):
-    if some_list: return (choice(some_list))
+    if some_list: return choice(some_list)
 
 
 
