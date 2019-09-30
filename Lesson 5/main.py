@@ -12,6 +12,12 @@ special
 #Удаляем папки
 kill
 
+import sys
+(sys.argv)
+
+def pung():
+    print(create)
+
 
 
 

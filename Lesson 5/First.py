@@ -1,3 +1,5 @@
+
+
 import sys, os
 
 #Данная функция создает папки
@@ -12,7 +14,7 @@ def create (name,range):
         else:
             print("Успешно создана  директория %s" % path)
 
-
-create('dir',range)
+if __name__ == '__main__':
+    create('dir',range)
 
 print('Папки созданы, поздраляю!')

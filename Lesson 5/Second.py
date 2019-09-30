@@ -2,10 +2,9 @@ import os
 
 # Данный функция удаляет то что мы создали в Modul_2
 
-def kill ():
+def kill (name,range):
     for i in range(1,10):
-        name = 'dir'
-        path = os.path.join(os.path.abspath(os.path.dirname(__file__)), '{}_{}'.format(name, i))
+        path = os.path.join(os.getcwd(), '{}_{}'.format(name, i))
         try:
             os.rmdir(path)
         except OSError:
@@ -13,8 +12,8 @@ def kill ():
         else:
             print("Успешно удалена директория %s" % path)
 
-
-kill()
+if __name__ == '__main__':
+    kill('dir',range)
 
 
 
