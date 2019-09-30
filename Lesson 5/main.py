@@ -4,19 +4,19 @@ from Second import kill
 
 
 # Ввод функции из первого документа
-create('dir',range)
+#create('dir',range)
 
 # Вычисление случайного числа из модуля Second
-special
+#special
 
 #Удаляем папки
-kill
+#kill
 
-import sys
-(sys.argv)
+#mport sys
+#(sys.argv)
 
-def pung():
-    print(create)
+#def pung():
+ #   print(create)
 
 
 

@@ -1,10 +1,10 @@
 
 
-import sys, os
+import os
 
 #Данная функция создает папки
 
-def create (name,range):
+def create (name):
     for i in range(1,10):
         path = os.path.join(os.getcwd(), '{}_{}'.format(name, i))
         try:
@@ -15,6 +15,5 @@ def create (name,range):
             print("Успешно создана  директория %s" % path)
 
 if __name__ == '__main__':
-    create('dir',range)
-
-print('Папки созданы, поздраляю!')
+    create('dir')
+    print('Папки созданы, поздраляю!')

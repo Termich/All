@@ -2,11 +2,12 @@
 
 from random import choice
 
-def special():
-    return(choice(list(map(int, input('Введите 4 числа через запятую, в одной строке.').split(',')))))
+
+def special(some_list):
+    if some_list: return (some_list)
+
+key = [1,2,3,4]
 
 
-
-print(special())
-
-
+if __name__ == '__main__':
+    print(choice(special(key)))
