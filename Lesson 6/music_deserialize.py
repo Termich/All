@@ -1,12 +1,15 @@
 import json
 import pickle
 
-with open('group.json','r') as f:
+#Читаем Json
+with open('group.jon','r') as f:
     js = json.load(f)
-
-with open('group.dat', 'r') as f:
+#Читаем Picle
+with open('group.dat', 'rb') as f:
     pi = pickle.load(f)
 
 print(js)
+print(type(js))
 
 print(pi)
+print(type(pi))
