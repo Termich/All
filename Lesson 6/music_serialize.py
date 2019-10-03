@@ -1,22 +1,28 @@
 import json
 import pickle
 
-my_favoutite_group = {
-    'name': 'A Victory of Love',
-    'artist': 'Alphaville',
-    'album': 'Forever Yong',
-    'year': '1984',
+def favorit_j():
+    my_favourite_group = {
+        'name': 'A Victory of Love',
+        'artist': 'Alphaville',
+        'album': 'Forever Yong',
+        'year': '1984',
     }
 
 with open('group.json','w',encoding='utf-8') as f:
-    json.dump(my_favoutite_group,f)
+    json.dump(my_favourite_group,f)
 
 print('Записано')
 
-my_favoutite_group = {
+def favorit_p():
+    my_favourite_group = {
+    'name': 'A Victory of Love',
+    'artist': 'Alphaville',
+    'album': 'Forever Yong',
+    'year': [1984,1985]
+    }
 
-
-with open('group.dat','w') as f:
-    pickle.dumps(my_favoutite_group,f)
+with open('group.dat','wb') as f:
+    pickle.dump(my_favourite_group, f)
 
 print('Готово')
