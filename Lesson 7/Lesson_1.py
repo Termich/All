@@ -3,6 +3,10 @@ a = ['Яблоко','Груша','Бургер']
 
 b = ['Ананас','Нектарин','Шаурма']
 
-result =[number for number in a if a.extend(b)]
+result = a + b
 
 print(result)
+
+#result =[number for number in c if a.extend(b)]
+
+#print(result)
