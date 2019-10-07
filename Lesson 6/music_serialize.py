@@ -13,9 +13,9 @@ my_favourite_group = {
 # Можно записать в байты следующим образом,
 # далеко не сразу до этого дошел после просмотра лекции, там об этом не сказано.
 
-#param = pickle.dumps(my_favourite_group)
-#print(param)
-#print(type(param))
+param = pickle.dumps(my_favourite_group)
+print(param)
+print(type(param))
 
 #Записываем в json
 
