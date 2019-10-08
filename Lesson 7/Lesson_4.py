@@ -11,5 +11,6 @@ number = int(input('Введите число: '))
 
 def banan(number):
     aba = [number if number == 13 else number ** 2]
+    raise ValueError
     return aba
 print(banan(number))
