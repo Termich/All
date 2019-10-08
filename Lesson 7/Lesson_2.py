@@ -1,5 +1,7 @@
 numbers = [1, 5, 8, 9, 20, 27, 45, 68, 41, -5, -10, -16, -55, 12]
 
+# Ниже закоментировано result для проверки
+
 # result = [number for number in numbers if number % 3 == 0]
 # result1 = [number for number in numbers if number > 0]
 # result2 = [number for number in numbers if number % 4 != 0]
