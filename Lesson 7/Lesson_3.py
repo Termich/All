@@ -1,17 +1,9 @@
 import math
 
+key = [1, 5, 8, 9, 20, 27, 45, 68, 41, -5, -10, -16, -55, 12]
 
-key = [1, -3, 4]
-
-result1 = [math.sqrt(number) for number in key if number > 0]
-
-result3 = [number for number in key if number < 0]
-
-
-
-print(result1)
-print(result3)
-#def numbers (key):
-#    newnumber = int[number for number in key if key**2]
-
-#print(numbers(key))
+def banana(key):
+    result = [math.sqrt(number) if number > 0 else number for number in key]
+    return result
+print(banana(key))
+print(key)
