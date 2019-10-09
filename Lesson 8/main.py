@@ -19,5 +19,20 @@ elif command == 'create_file':
 
 elif command == 'create_folder':
     name = sys.argv[2]
+    create_folder(name)
+elif command == 'delete':
+    name = sys.argv[2]
+    delete_file(name)
+elif command == 'copy':
+    name = sys.argv[2]
     new_name = sys.argv[3]
-    create_folder(name, new_name)
+    copy_file(name, new_name)
+
+elif command == 'help':
+    print('list - список файлов и папок')
+    print('create_file - создание файла')
+    print('create_folder - создание папки')
+    print('delete - удаление файла или папки')
+    print('copy - копирование файла или папки')
+
+save_info('Конец')
