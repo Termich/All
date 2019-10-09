@@ -1,5 +1,6 @@
 import os
-
+import shutil
+import datetime
 
 def create_file(name, text=None):
     with open(name, 'w', encoding='utf-8') as f:
@@ -31,12 +32,18 @@ def delete_file(name):
 def copy_file(name, new_name):
     if os.path.isdir(name):
         try:
-            shutil.copyfree(name, new_name)
+            shutil.copytree(name, new_name)
         except FileExistsError:
             print('Таккая папка уже есть')
     else:
         shutil.copy(name, new_name)
 
+
+def save_info(message):
+    current_time = datetime.datetime.now()
+    result = f'{current_time} - {message}'
+    with open('log.txt', 'a', encoding='utf-8') as f:
+        f.write(result + '\n')
 
 
 
@@ -50,5 +57,6 @@ if __name__ == '__main__':
     get_list()
     delete_file('New_f1')
     delete_file('test.dat')
-    copy_file('test12.dat','test14.dat')
-    copy_file('New_f2','New_f3')
+    copy_file('test12.dat', 'test14.dat')
+    copy_file('New_f2', 'New_f3')
+    save_info('abc')
