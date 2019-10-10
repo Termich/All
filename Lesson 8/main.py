@@ -7,6 +7,14 @@ save_info('Старт')
 
 command = sys.argv[1]
 
+if command = sys.argv[i]
+    try:
+        command = sys.argv[i]
+    except Exception:
+        print('Введите команду')
+    else:
+        command = sys.argv[1]
+
 if command == 'list':
     get_list()
 
