@@ -4,21 +4,22 @@ from core import create_file, create_folder, get_list, delete_file, copy_file, s
 from game import games
 
 save_info('Старт')
-command = sys.argv[1]
+
 try:
     command = sys.argv[1]
 except Exception:
     print('Введите команду')
-else:
-    command = sys.argv[1]
-
 
 if command == 'list':
     get_list()
 
-if command == 'game':
-    games()
-
+elif command == 'game':
+    try:
+        games()
+    except Exception:
+        print('Ошибка')
+    else:
+        games()
 
 elif command == 'create_file':
     try:
