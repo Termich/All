@@ -1,4 +1,5 @@
 import sys, random
+import os
 
 from core import create_file, create_folder, get_list, delete_file, copy_file, save_info, banana
 from game import games
@@ -35,6 +36,7 @@ else:
             print('Ошибка')
         else:
             banana(name)
+            print('Вы находитесь в директории:', os.getcwd())
 
     elif command == 'create_folder':
         try:
