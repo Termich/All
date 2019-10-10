@@ -26,6 +26,7 @@ else:
             print('Отсутствует название файла')
         else:
             create_file(name)
+            print('Файл создан')
 
     elif command == 'change':
         try:

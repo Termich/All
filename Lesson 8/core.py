@@ -5,14 +5,7 @@ import datetime
 def create_file(name, text=None):
     with open(name, 'w', encoding='utf-8') as f:
         if text:
-            try:
-                f.write(text)
-            except Exception:
-                print('Ошибка')
-            else:
-                print('Файл создан')
-
-
+            f.write(text)
 
 def create_folder(name):
     try:
