@@ -10,11 +10,11 @@ def games(start = 1, end = 100):
         if key == '=':
             print('Победа, меня не так то просто обхетрить')
             break
-        elif key == '<':
+        elif key == '>':
             start = number + 1
             print('Неправильно, Маловато')
 
-        elif key == '>':
+        elif key == '<':
             end = number - 1
             print('Многовато, попробую еще')
     return (number)

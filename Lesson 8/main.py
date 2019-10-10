@@ -15,10 +15,8 @@ else:
         get_list()
 
     elif command == 'game':
-        try:
-            games()
-        except Exception:
-            print('Ошибка')
+        games()
+
 
     elif command == 'create_file':
         try:
@@ -53,6 +51,7 @@ else:
             print('Ошибка')
         else:
             delete_file(name)
+
 
     elif command == 'copy':
         try:

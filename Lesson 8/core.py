@@ -33,6 +33,13 @@ def delete_file(name):
             print("Удалить директорию  не удалось")
         else:
             print("Успешно удалена директория")
+    else:
+            try:
+                os.remove(name)
+            except Exception:
+                print("Удалить файл  не удалось")
+            else:
+                print("Успешно удален файл")
 
 
 def copy_file(name, new_name):
