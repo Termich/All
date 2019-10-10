@@ -6,13 +6,6 @@ from game import games
 save_info('Старт')
 
 command = sys.argv[1]
-    try:
-        command = sys.argv[1]:
-    except Exception
-        print('Ошибка, введите команду Help')
-    else:
-        command
-
 
 if command == 'list':
     get_list()
@@ -32,7 +25,7 @@ elif command == 'create_file':
 elif command == 'change':
     try:
         name = sys.argv[2]
-    except Exception
+    except Exception:
         print('Ошибка')
     else:
         banana(name)
@@ -41,7 +34,7 @@ elif command == 'change':
 elif command == 'create_folder':
     try:
         name = sys.argv[2]
-    except Exception
+    except Exception:
         print('Ошибка')
     else:
         create_folder(name)
@@ -49,7 +42,7 @@ elif command == 'create_folder':
 elif command == 'delete':
     try:
         name = sys.argv[2]
-    except Exception
+    except Exception:
         print('Ошибка')
     else:
         delete_file(name)
@@ -58,7 +51,7 @@ elif command == 'copy':
     try:
         name = sys.argv[2]
         new_name = sys.argv[3]
-    except Exception
+    except Exception:
         print('Ошибка')
     else:
         copy_file(name, new_name)
