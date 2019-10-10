@@ -13,6 +13,10 @@ def create_folder(name):
         os.mkdir(name)
     except FileExistsError:
         print('Такая папка уже есть')
+    except IndexError:
+        print('Папка не создана')
+    else:
+        print('Папка создана')
 
 
 def get_list(folder_only=False):
@@ -24,9 +28,12 @@ def get_list(folder_only=False):
 
 def delete_file(name):
     if os.path.isdir(name):
-        os.rmdir(name)
-    else:
-        os.remove(name)
+        try:
+            os.rmdir(name)
+        except Exception:
+            print("Удалить директорию  не удалось")
+        else:
+            print("Успешно удалена директория")
 
 
 def copy_file(name, new_name):
@@ -35,6 +42,8 @@ def copy_file(name, new_name):
             shutil.copytree(name, new_name)
         except FileExistsError:
             print('Таккая папка уже есть')
+        else:
+            print('Копирование выполнено')
     else:
         shutil.copy(name, new_name)
 
@@ -44,6 +53,15 @@ def save_info(message):
     result = f'{current_time} - {message}'
     with open('log.txt', 'a', encoding='utf-8') as f:
         f.write(result + '\n')
+
+def banana(name):
+    if os.chdir(name):
+        try:
+            os.chdir(name)
+        except Exception:
+            print('Ошибка')
+        else:
+            print('Вы поменяли директорию')
 
 
 

@@ -1,6 +1,7 @@
-import sys
+import sys, random
 
-from core import create_file, create_folder, get_list, delete_file, copy_file, save_info
+from core import create_file, create_folder, get_list, delete_file, copy_file, save_info, banana
+from game import games
 
 save_info('Старт')
 
@@ -9,6 +10,10 @@ command = sys.argv[1]
 if command == 'list':
     get_list()
 
+if command == 'game':
+    games()
+
+
 elif command == 'create_file':
     try:
         name = sys.argv[2]
@@ -16,6 +21,11 @@ elif command == 'create_file':
         print('Отсутствует название файла')
     else:
         create_file(name)
+
+elif command == 'change':
+    name = sys.argv[2]
+    banana(name)
+
 
 elif command == 'create_folder':
     name = sys.argv[2]
@@ -34,5 +44,7 @@ elif command == 'help':
     print('create_folder - создание папки')
     print('delete - удаление файла или папки')
     print('copy - копирование файла или папки')
+    print('change - смена директории')
+    print('game - Игра угадай число')
 
 save_info('Конец')
