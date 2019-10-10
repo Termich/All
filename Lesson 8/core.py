@@ -58,8 +58,8 @@ def banana(name):
     if os.chdir(name):
         try:
             os.chdir(name)
-        except Exception:
-            print('Ошибка')
+        except FileNotFoundError:
+            print('Ошибка, нет такой директории')
         else:
             print('Вы поменяли директорию')
 
