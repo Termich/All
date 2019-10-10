@@ -11,15 +11,18 @@ except Exception:
     print('Введите команду')
 
 if command == 'list':
-    get_list()
+    try:
+        get_list()
+    except Exception:
+        print('Ошибка')
+
 
 elif command == 'game':
     try:
         games()
     except Exception:
         print('Ошибка')
-    else:
-        games()
+
 
 elif command == 'create_file':
     try:
