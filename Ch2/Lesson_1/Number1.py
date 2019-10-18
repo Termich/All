@@ -15,18 +15,14 @@ words = re.compile('\w{4,}')
 # Нашел 10 самых часто повторяющихся слов
 vrd = Counter(x for x in re.findall('\w{4,}', content))
 
-
 #Возврат ссылок которые встречаються чаще всего
 cnt = Counter(x for x in re.findall('[\w]+\.[\w]+', content))
-
 
 # Отобрал все ссылки
 links = re.compile('[\w\.]+\.[\w/]+')
 
-
 # Замените все ссылки на текст:
 Registration = re.sub(links, "'Ссылка отобразится после регистрации'", content)
-
 
 print("Получил текст из файла")
 print(content)
