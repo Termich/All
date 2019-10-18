@@ -21,7 +21,7 @@ words = re.compile('\w{4,}')
 
 #print(patern2)
 
-links = re.compile('[\w]+\.[\w]+')
+links = re.compile('[\w\.:/]+\.[\w/\.]+')
 print(links.findall(content))
 #print(links)
 
