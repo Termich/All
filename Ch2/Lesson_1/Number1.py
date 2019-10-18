@@ -1,13 +1,19 @@
 import re
 
-with open("text.txt", "r") as file:
+with open("text.txt", "r", encoding='utf-8') as file:
     content = file.read()
-    # print(content)
+ #   print(content)
+print(content)
 
-patern1 = r'(?<=\w[.!?])'
+patern1 = re.compile('[\.\?!]\s+')
+result = re.split(patern1, content)
+#print(result)
 
-words = re.compile('\w+')
-print(words.findall(content))
+
+words = re.compile('\w{4,}')
+# print(words.findall(content))
+
+
 
 
 
@@ -15,7 +21,9 @@ print(words.findall(content))
 
 #print(patern2)
 
-#result = re.split(patern1, content)
+links = re.compile('[\w]+\.[\w]+')
+print(links.findall(content))
+#print(links)
 
-#print(result)
+
 
