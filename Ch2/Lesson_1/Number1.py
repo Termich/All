@@ -12,12 +12,16 @@ result = re.split(patern1, content)
 # Нашел слова состоящие из 4 букв
 words = re.compile('\w{4,}')
 
+# Нашел 10 самых часто повторяющихся слов
+vrd = Counter(x for x in re.findall('\w{4,}', content))
+
+
+#Возврат ссылок которые встречаються чаще всего
 cnt = Counter(x for x in re.findall('[\w]+\.[\w]+', content))
+
 
 # Отобрал все ссылки
 links = re.compile('[\w\.]+\.[\w/]+')
-
-#Возврат ссылок которые встречаються чаще всего
 
 
 # Замените все ссылки на текст:
@@ -31,10 +35,10 @@ print(result)
 print("Нашел слова состоящие из 4-х букв")
 print(words.findall(content))
 print('10 самых часто используемых слов')
-print(cnt.most_common(10))
+print(vrd.most_common(10))
 print("Нашел все ссылки")
 print(links.findall(content))
 print("Самая часто употребляемая ссылка")
 print(cnt.most_common(1))
-print("Ссылка отобразиться после регистрации")
+print("Сделал что ссылка отобразиться после регистрации")
 print(Registration)
