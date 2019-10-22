@@ -20,5 +20,8 @@ soup = BS(s, "html.parser")
 print(soup.find_all('<span class="total-users"'))
 
 
+result = soup.find('div', {'class' :'col'}).find('span'),s
+print(result)
+
 print("HTML: {0}, name: {1}, text: {2}".format(soup.h2,
         soup.h2.name, soup.h2.text))
