@@ -17,11 +17,21 @@ print(li1)
 # Сделаем как у препода)
 
 soup = BS(s, "html.parser")
-print(soup.find_all('<span class="total-users"'))
+# print(soup.span)
+#
+# print(soup.title.string)
+new_news = []
+news = []
+print(soup.find_all('div', class_='col'))
+for i in range(len(news)):
+    if news[i]. find ('div', class_ = 'total-users') is not None:
+        new_news.append(news[i].text)
+
+#result = soup.find('div', {'class' :'col'}).find('span'),s
+#print(result)
 
 
-result = soup.find('div', {'class' :'col'}).find('span'),s
-print(result)
 
-print("HTML: {0}, name: {1}, text: {2}".format(soup.h2,
-        soup.h2.name, soup.h2.text))
+
+
+
