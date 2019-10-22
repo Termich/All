@@ -17,7 +17,7 @@ print(li1)
 # Сделаем как у препода)
 
 soup = BS(s, "html.parser")
-print(soup.find_all("total-users"))
+print(soup.find_all('<span class="total-users"'))
 
 
 print("HTML: {0}, name: {1}, text: {2}".format(soup.h2,
