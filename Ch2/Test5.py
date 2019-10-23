@@ -8,5 +8,5 @@ resp = requests.get(link)
 text = resp.text
 data = json.loads(text)
 
-
+print(resp)
 print(data["main"]["temp"])
