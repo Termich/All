@@ -14,27 +14,12 @@ print(li1)
 
 # Находим количество человек через BeautifulSoup.
 
-# Сделаем как у препода)
-
 soup = BS(s, "html.parser")
-# print(soup.span)
-#
-# print(soup.title.string)
-new_news = []
-news = []
-print(soup.find_all('div', class_='col'))
-
-for i in range(len(news)):
-    if news[i]. find ('div', class_ = 'total-users') is not None:
-        new_news.append(news[i].text)
 
 
-
-
-
-#result = soup.find('div', {'class' :'col'}).find('span'),s
-#print(result)
-
+t= soup.find_all('span', class_='total-users')
+t= t[0].text
+print (t)
 
 
 
