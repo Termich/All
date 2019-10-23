@@ -23,9 +23,14 @@ soup = BS(s, "html.parser")
 new_news = []
 news = []
 print(soup.find_all('div', class_='col'))
+
 for i in range(len(news)):
     if news[i]. find ('div', class_ = 'total-users') is not None:
         new_news.append(news[i].text)
+
+
+
+
 
 #result = soup.find('div', {'class' :'col'}).find('span'),s
 #print(result)
