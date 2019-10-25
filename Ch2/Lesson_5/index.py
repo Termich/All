@@ -1,7 +1,7 @@
 import re
 from bs4 import BeautifulSoup as BS
 from wiki_requests import get_topic_page
-
+from wiki_requests import get_link
 
 def get_topic_words(topic):
     html_content = get_topic_page(topic)
@@ -22,23 +22,27 @@ def get_common_words(topic):
 
 def visualize_common_words(topic):
     words = get_common_words(topic)
-    for w in words[10:13]:
+    for w in words[3:6]:
         print(w[0])
 
 def main():
     topic = input("Topic: ")
     visualize_common_words(topic)
 
+Fink = print(visualize_common_words(input("ВВедите значение")))
 
-#
-# li = re.findall('<p><a href="/wiki/([\d\s]+)"></a></p>',get_topic_page)
+# li = re.findall('<p><a href="/wiki/([\d\s]+)"></a></p>',Fink)
 # print(li)
 
-soup = BS(get_topic_page,"html.parser")
-t= soup.find_all("div",class_="mw-parser-output",text="/wiki/")
-print(t)
+with open (get_link,encoding='utf-8') as f:
+    s = f.read()
+soup = BS(s,"html.parser")
+print(soup)
 
-# print(visualize_common_words(input()))
+# t= soup.find_all("div id",class_="mw-parser-output",text="/wiki/")
+# print(t)
+
+
 
 
 
