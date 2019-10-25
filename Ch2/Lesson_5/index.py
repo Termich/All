@@ -30,13 +30,13 @@ def main():
     visualize_common_words(topic)
 
 
+#
+# li = re.findall('<p><a href="/wiki/([\d\s]+)"></a></p>',get_topic_page)
+# print(li)
 
-li = re.findall('<p><a href="/wiki/([\d\s]+)">([\d\s]+)</a></p>',get_topic_page)
-print(li)
-
-# soup = BS(get_topic_page,"html.parser")
-# t= soup.find_all(
-# print(t)
+soup = BS(get_topic_page,"html.parser")
+t= soup.find_all("div",class_="mw-parser-output",text="/wiki/")
+print(t)
 
 # print(visualize_common_words(input()))
 
