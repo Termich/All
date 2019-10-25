@@ -31,5 +31,10 @@ def main():
 
 
 
+li = re.findall('<a href="/wiki/([\d\s]+)></a>',get_topic_page)
+print(li)
+# soup = BS(get_topic_page,"html.parser")
+# t= soup.find_all('div', class_='a href')
+
 
 print(visualize_common_words(input()))
