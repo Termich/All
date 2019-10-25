@@ -1,4 +1,5 @@
 import re
+from bs4 import BeautifulSoup as BS
 from wiki_requests import get_topic_page
 
 
@@ -21,9 +22,14 @@ def get_common_words(topic):
 
 def visualize_common_words(topic):
     words = get_common_words(topic)
-    for w in words[100:110]:
+    for w in words[10:13]:
         print(w[0])
 
 def main():
     topic = input("Topic: ")
     visualize_common_words(topic)
+
+
+
+
+print(visualize_common_words(input()))

@@ -1,3 +1,4 @@
+
 from requests import get
 
 def get_link(topic):
