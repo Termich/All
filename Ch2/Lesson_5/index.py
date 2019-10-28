@@ -35,7 +35,7 @@ def main():
     topic = input("Topic: ")
     visualize_common_words(topic)
 
-
+#Получаю ссылки на соседние страницы.
 def get_http(topic):
     html_content = get_topic_page(topic)
     soup = BS(html_content, "html.parser")
@@ -45,27 +45,17 @@ def get_http(topic):
     return result
 
 
-# Fink = print(visualize_common_words(input("ВВедите значение")))
 topics = get_http(input("ВВедите значение"))[:10]
-
-
+# Получение списка слов из ссылок 
+li=[]
 for topic in topics:
-    li = get_common_words(topic)[:3]
-    for word in li:
-        if word in li:
-            li[word] += 1
-        else:
-            li[word] = 1
-        li2 = li2.append
-print(li2)
+    li.append(get_common_words(topic)[:3])
+    # for word in li:                            # Альтернативное решение(Добавления слов,в список)
+    #     li2.append(word[0])
 
-# li = re.findall('<p><a href="/wiki/([\d\s]+)"></a></p>',Fink)
-# print(li)
-#
-# with open (get_link,encoding='utf-8') as f:
-#     s = f.read()
-# soup = BS(s,"html.parser")
-# print(soup)
 
-# t= soup.find_all("div id",class_="mw-parser-output",text="/wiki/")
-# print(t)
+
+
+
+print(li)
+print(len(li))
