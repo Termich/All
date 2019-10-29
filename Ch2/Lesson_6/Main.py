@@ -7,17 +7,23 @@ class Word:
 
 class Sentence:
 
-    def __init__(self, text, part):
-        self.content = []
-        self.words = [["собака", "сущ"],
-                      ["ела", "глагол"],
-                      ["колбасу", "сущ"],
-                      ["вечером", "наречие"]]
+    # words = [["собака", "сущ"],
+    #          ["ела", "глагол"],
+    #          ["колбасу", "сущ"],
+    #          ["вечером", "наречие"]]
+
+    def __init__(self, words):
+        self.content = words[["собака", "сущ"],
+             ["ела", "глагол"],
+             ["колбасу", "сущ"],
+             ["вечером", "наречие"]]
 
 
+banana = Word("собака", "сущ")
+apana = Word("ела", "глагол")
+papana = Sentence(0,2)
 
-banana = Word("собака","сущ")
-apana = Word("ела","глагол")
 
-print(banana.text,apana.text)
-print(banana.part,apana.part)
+print(papana.content)
+print(banana.text, apana.text)
+print(banana.part, apana.part)
