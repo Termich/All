@@ -46,7 +46,7 @@ def get_http(topic):
 
 
 topics = get_http(input("ВВедите значение"))[:10]
-# Получение списка слов из ссылок 
+# Получение списка слов из ссылок
 li=[]
 for topic in topics:
     li.append(get_common_words(topic)[:3])
