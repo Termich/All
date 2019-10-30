@@ -2,13 +2,20 @@ from Main import Word
 from Main import Sentence
 
 class Noun(Word):
-    def __init__(self,grammar):
-        self.__grammar = grammar
-
-class Verb(Word,grammar):
     def __init__(self):
-        self.__grammar = grammar
+        self.__grammar = "сущ"
 
-        
-print(papana.show())
-print(papana.show_parts())
+class Verb(Word):
+    def __init__(self):
+        self.__grammar = "гл"
+
+
+
+
+words = []
+words.append(Noun("собака"))
+words.append(Verb("ела"))
+words.append(Noun("колбасу"))
+words.append(Noun("кот"))
+
+
