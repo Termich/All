@@ -15,24 +15,28 @@ class Sentence:
 
 
     def show_parts(self):
-        parts = [words[x].part for x in self.content]
+        parts = [words[x].part() for x in self.content]
         parts = list(set(parts))
         return parts
 
 class Noun(Word):
     __grammar = "сущ"
-    # def __init__(self):
+    def part(self):
+        return "существительное"
 
 
 class Verb(Word):
     __grammar = "гл"
-    # def __init__(self):
+    def part(self):
+        return "Глагол"
 
-
+papana = Sentence([0, 1, 2, 3])
 words = []
 words.append(Noun("собака"))
 words.append(Verb("ела"))
 words.append(Noun("колбасу"))
 words.append(Noun("кот"))
+print(papana.show())
 
-
+print(words[0].part())
+print(papana.show_parts())
